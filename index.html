@@ -293,7 +293,7 @@ footer {
 
   <!-- Shoe 4 -->
   <div class="card">
-    <img src="images/running-grey-yellow-1.jpg">
+    <img src="images/running-puma-1.jpg">
     <h2>Grey Sports Shoes</h2>
     <p class="price">₹1,699</p>
     <p class="features">Cushioned • Strong Sole • Running</p>
@@ -309,52 +309,8 @@ footer {
     <button onclick="order()">Order on WhatsApp</button>
   </div>
 
-</div>
-
- <!-- Hidden Admin -->
-<div id="adminBox" style="display:none;position:fixed;bottom:10px;right:10px;background:#000;color:#fff;padding:10px;border-radius:10px;font-size:12px;z-index:9999;">
-  <input id="pass" type="password" placeholder="Password"><br><br>
-  <input id="sname" placeholder="Shoe Name"><br><br>
-  <input id="oldp" placeholder="Old Price"><br><br>
-  <input id="newp" placeholder="New Price"><br><br>
-  <input id="sale" placeholder="Sale Text"><br><br>
-  <button onclick="saveData()">SAVE</button>
-</div>
-
-<script>
-const PASSWORD = "hooda123";   // 🔐 mayank@123
-
-let taps = 0;
-document.body.addEventListener("click", () => {
-  taps++;
-  if(taps === 5){
-    document.getElementById("adminBox").style.display = "block";
-    alert("Admin Mode ON");
-    taps = 0;
-  }
-});
-
-function saveData(){
-  if(pass.value !== PASSWORD){
-    alert("Wrong Password");
-    return;
-  }
-  localStorage.setItem("name", sname.value);
-  localStorage.setItem("oldp", oldp.value);
-  localStorage.setItem("newp", newp.value);
-  localStorage.setItem("sale", sale.value);
-  loadData();
-}
-
-function loadData(){
-  document.getElementById("shoe-name").innerText = localStorage.getItem("name") || "Running Shoes";
-  document.getElementById("old-price").innerText = "₹" + (localStorage.getItem("oldp") || "1899");
-  document.getElementById("new-price").innerText = "₹" + (localStorage.getItem("newp") || "1499");
-  document.getElementById("sale-badge").innerText = localStorage.getItem("sale") || "SALE";
-}
-loadData();
 </script>
-<h2 id="shoe-name">Running Shoes</h2>
+<h2 id="Puma, Adidas, Nike, new balance">Running Shoes</h2>
 <p id="old-price">₹1899</p>
 <p id="new-price">₹1499</p>
 <div id="sale-badge">SALE</div>
