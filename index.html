@@ -170,3 +170,163 @@ footer{
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hooda Shoe House</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+}
+
+header {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+.container {
+  padding: 15px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card h2 {
+  margin: 10px 0 5px;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.features {
+  color: #555;
+  margin: 5px 0 10px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #25d366;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+.social-links {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.social-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #1877f2;
+}
+
+footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Hooda Shoe House</h1>
+  <p>Best Quality Shoes for Daily & Sports Wear</p>
+</header>
+
+<div class="container">
+
+  <!-- Shoe 1 -->
+  <div class="card">
+    <img src="images/running-white-nb.jpg">
+    <h2>Running Shoes (White)</h2>
+    <p class="price">₹1,499</p>
+    <p class="features">Lightweight • Comfortable • Daily Use</p>
+    <button onclick="order()">Order on WhatsApp</button>
+  </div>
+
+  <!-- Shoe 2 -->
+  <div class="card">
+    <img src="images/casual-white.jpg">
+    <h2>Casual Shoes (White)</h2>
+    <p class="price">₹1,299</p>
+    <p class="features">Stylish • Comfortable • Everyday Wear</p>
+    <button onclick="order()">Order on WhatsApp</button>
+  </div>
+
+  <!-- Shoe 3 -->
+  <div class="card">
+    <img src="images/running-multicolor.jpg">
+    <h2>Sports Running Shoes</h2>
+    <p class="price">₹1,799</p>
+    <p class="features">High Grip • Breathable • Premium Look</p>
+    <button onclick="order()">Order on WhatsApp</button>
+  </div>
+
+  <!-- Shoe 4 -->
+  <div class="card">
+    <img src="images/running-grey-yellow-1.jpg">
+    <h2>Grey Sports Shoes</h2>
+    <p class="price">₹1,699</p>
+    <p class="features">Cushioned • Strong Sole • Running</p>
+    <button onclick="order()">Order on WhatsApp</button>
+  </div>
+
+  <!-- Shoe 5 -->
+  <div class="card">
+    <img src="images/running-puma-white.jpg">
+    <h2>White Sports Shoes</h2>
+    <p class="price">₹1,599</p>
+    <p class="features">Trendy • Soft Sole • Long Lasting</p>
+    <button onclick="order()">Order on WhatsApp</button>
+  </div>
+
+</div>
+
+<!-- Social Media -->
+<div class="social-links">
+  <a href="https://www.instagram.com/hooda_shoe_house?igsh=MWpnaHFoMmM5OWIwdw==" target="_blank">Instagram</a>
+  |
+  <a href="https://www.facebook.com/share/1G6y26hF5C/" target="_blank">Facebook</a>
+</div>
+
+<footer>
+  © 2025 Hooda Shoe House
+</footer>
+
+<script>
+function order() {
+  window.location.href = "https://wa.me/91XXXXXXXXXX";
+}
+</script>
+
+</body>
+</html>
