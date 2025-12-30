@@ -311,30 +311,9 @@ footer {
 
 </div>
 
-<!-- Social Media -->
-<div class="social-links">
-  <a href="https://www.instagram.com/hooda_shoe_house?igsh=MWpnaHFoMmM5OWIwdw==" target="_blank">Instagram</a>
-  |
-  <a href="https://www.facebook.com/share/1G6y26hF5C/" target="_blank">Facebook</a>
-</div>
-
-<footer>
-  © 2025 Hooda Shoe House
-</footer>
-
-<script>
-function order() {
-  window.location.href = "https://wa.me/91XXXXXXXXXX";
-}
-</script>
-
-</body>
-</html>
-<!-- Aapka website ka upar ka poora code -->
-
-<!-- Admin Panel PASTE HERE -->
-<div id="adminBox" style="position:fixed;bottom:10px;right:10px;background:#000;color:#fff;padding:10px;border-radius:10px;font-size:12px;">
-  <input id="pass" placeholder="Password" type="password" style="width:120px"><br><br>
+ <!-- Hidden Admin -->
+<div id="adminBox" style="display:none;position:fixed;bottom:10px;right:10px;background:#000;color:#fff;padding:10px;border-radius:10px;font-size:12px;z-index:9999;">
+  <input id="pass" type="password" placeholder="Password"><br><br>
   <input id="sname" placeholder="Shoe Name"><br><br>
   <input id="oldp" placeholder="Old Price"><br><br>
   <input id="newp" placeholder="New Price"><br><br>
@@ -343,46 +322,39 @@ function order() {
 </div>
 
 <script>
-const PASSWORD = "hooda123";
+const PASSWORD = "hooda123";   // 🔐 mayank@123
+
+let taps = 0;
+document.body.addEventListener("click", () => {
+  taps++;
+  if(taps === 5){
+    document.getElementById("adminBox").style.display = "block";
+    alert("Admin Mode ON");
+    taps = 0;
+  }
+});
 
 function saveData(){
-  if(document.getElementById("pass").value !== PASSWORD){
+  if(pass.value !== PASSWORD){
     alert("Wrong Password");
     return;
   }
-
   localStorage.setItem("name", sname.value);
   localStorage.setItem("oldp", oldp.value);
   localStorage.setItem("newp", newp.value);
   localStorage.setItem("sale", sale.value);
-
   loadData();
 }
 
 function loadData(){
-  document.getElementById("shoe-name").innerText =
-    localStorage.getItem("name") || "Running Shoes";
-
-  document.getElementById("old-price").innerText =
-    "₹" + (localStorage.getItem("oldp") || "1899");
-
-  document.getElementById("new-price").innerText =
-    "₹" + (localStorage.getItem("newp") || "1499");
-
-  document.getElementById("sale-badge").innerText =
-    localStorage.getItem("sale") || "SALE";
+  document.getElementById("shoe-name").innerText = localStorage.getItem("name") || "Running Shoes";
+  document.getElementById("old-price").innerText = "₹" + (localStorage.getItem("oldp") || "1899");
+  document.getElementById("new-price").innerText = "₹" + (localStorage.getItem("newp") || "1499");
+  document.getElementById("sale-badge").innerText = localStorage.getItem("sale") || "SALE";
 }
-
 loadData();
 </script>
-
-</body>
-</html>
-<div id="adminBox" style="position:fixed;bottom:10px;right:10px;background:#000;color:#fff;padding:10px;border-radius:10px;font-size:12px;">
-  <input id="pass" placeholder="Password" type="password"><br><br>
-  <input id="sname" placeholder="Shoe Name"><br><br>
-  <input id="oldp" placeholder="Old Price"><br><br>
-  <input id="newp" placeholder="New Price"><br><br>
-  <input id="sale" placeholder="Sale Text"><br><br>
-  <button onclick="saveData()">SAVE</button>
-</div>
+<h2 id="shoe-name">Running Shoes</h2>
+<p id="old-price">₹1899</p>
+<p id="new-price">₹1499</p>
+<div id="sale-badge">SALE</div>
